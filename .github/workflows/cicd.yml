@@ -34,7 +34,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: dotnet-webapp
-        path: src/bin/Release/net6.0/
+        path: src/bin/Release
   
   deploy:
     permissions:
