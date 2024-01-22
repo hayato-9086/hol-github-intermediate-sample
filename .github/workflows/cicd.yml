@@ -1,5 +1,9 @@
 name: .NET
 
+env:
+  AZURE_WEBAPP_NAME: app-TestAppaj3e    # Azure Web Appに設定した名前に変えてください
+  AZURE_WEBAPP_PACKAGE_PATH: '.'   
+
 on:
   push: # xxxをプッシュイベントに変えてください
     branches: [ "main" ] # mainブランチを対象にしてください
@@ -31,4 +35,5 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: dotnet-webapp
-        path: ./src/bin/Publish
+        path: src/bin/Release/net6.0/
+  
